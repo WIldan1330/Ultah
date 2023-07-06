@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+      body {
+        font-family: "Belasonima", sans-serif;
+      }
+
+      #btn-alert {
+        border: none;
+        border-radius: 5px;
+        padding: 7px 10px;
+        background-color: midnightblue;
+        font-size: 1.3em;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+        position: fixed;
+        left: 45%;
+        top: 45%;
+      }
+
+      #btn-alert:hover {
+        opacity: 0.7;
+      }
+
+      #btn-alert:focus {
+        outline: midnightblue, solid 3px;
+        outline-style: 4px;
+      }
+
+      @media (max-width: 576px) {
+        #btn-alert {
+          left: 35%;
+        }
+      }
+    </style>
+
+    <title>Happy Birthday Anggi</title>
+  </head>
+  <body>
+    <button id="btn-alert" onclick="munculinAlert()">Pencet yg ini tod!</button>
+
+    <script>
+      async function munculinAlert() {
+        await Swal.fire("Hai Anggi");
+        await Swal.fire("Happy Birthday ya");
+        await Swal.fire({
+          title: "Happy Birthday 19thn",
+          text: "Semoga panjang umur, sehat selalu, di lancarkan semua aktifitasnya,sering sering traktir gw ya sugar mommy, cepet tobah juga geh saran gw mah, harusnya makin tua makin sadar diri ya TOD!!! .",
+          imageUrl: "aset/1.jpg",
+          imageWidth: 400,
+          imageHeight: 300,
+          imageAlt: "Gambar Kue Ulang Tahun",
+        });
+        await Swal.fire({
+          title: "Suka ga lo anj?",
+          text: "Harus suka ya anj gw ngoding cape cape pler",
+          icon: "question",
+          showDenyButton: true,
+          confirmButtonColor: "#3085d6",
+          confirmButtonText: "Suka dong!",
+          denyButtonText: "Ga suka",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "Untung lu suka",
+              text: "THANKS COK, BTW JANGAN LUPA ACARANYA YA AWWKKWKW... .",
+              imageUrl: "aset/2.jpg",
+              imageWidth: 400,
+              imageHeight: 300,
+              imageAlt: "Gambar Meme Senyum",
+            });
+          } else {
+            Swal.fire({
+              title: "Parah sih pler",
+              text: "Anj gw capek ngoding lu ga suka pler parah bet memek😑 .",
+              imageUrl: "aset/3.jpg",
+              imageWidth: 400,
+              imageHeight: 300,
+              imageAlt: "Gambar Meme Sedih",
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
